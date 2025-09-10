@@ -1,0 +1,19 @@
+*{
+    margin: 0px;    
+    color: snow;
+    background-color: black;
+    padding: 10px 0px 10px 0px;
+}
+
+.titulo{
+    border-bottom: 1px solid gray;
+}
+
+#graficoBarras{
+    max-height: 150px;
+    max-width: 100%; 
+}
+
+.um{
+    border-bottom: 2px solid lightblue;
+}
