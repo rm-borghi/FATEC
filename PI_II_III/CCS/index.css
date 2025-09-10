@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --cor_primaria: rgba(255, 255, 255, 0.9);
+    --cor_secundaria: rgba(25, 58, 5, 0.801);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../PI_II_III/IMAGENS/floresta_caminho.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;        
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 50px;
+    background: var(--cor_primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 50px;
+    background: var(--cor_primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.objt_imagem{
+   align-self: auto;
+   height: 5%;
+   width: 5%;
+   max-width: 55px;
+   max-width: 55px;
+}
+
+.ind_btn:hover{
+    background: var(--cor_primaria);
+    color: var(--cor_secundaria);
+}
+
+.lgn_cntner{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid snow;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px var(--cor_primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lgn_cntner .box_login{
+    width: 100%;
+    padding: 40px;
+}
+
+.lgn_cntner h2{
+    font-size: 2em;
+    color: var(--cor_primaria);
+    text-align: center;
+}
+
+.log_inpt{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--cor_primaria);
+    margin: 30px 0;
+}
+
+.log_inpt label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--cor_primaria);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.log_inpt input:focus~label,
+.log_inpt input:valid~label{
+    top: -5px;
+}
+
+.log_inpt input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--cor_primaria);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.log_inpt .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--cor_primaria);
+    line-height: 57px;
+}
+
+.ind_btn{
+    width: 100%;
+    height: 45px;
+    background: var(--cor_secundaria);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--cor_primaria);
+    font-weight: 500;    
+}
+
+.lgn_cntner .log_fecha{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    font-size: 2em;
+    color: var(--cor_primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.lgn_cntner .cnt_lgn {
+    position: relative;
+    top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.lgn_cntner .cnt_lgn a,
+.lgn_cntner .cnt_lgn a,
+.lgn_cntner .somos a  {
+    color: snow;
+}
+
+.lgn_cntner .marca,
+.lgn_cntner .somos{
+    position: relative;
+    display: flex;
+    top: 20px;
+    width: 100%;
+    color: snow;
+    font-size: 14px;
+    justify-content: center;
+}
+
