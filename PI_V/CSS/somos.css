@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --cor_primaria: rgba(255, 255, 255, 0.9);
+    --cor_secundaria: rgba(25, 58, 5, 0.801);
+    --somos_fundo: url('https://eclipsedataworks.devfatec-campinas.com.br/IMAGENS/alpha.png')
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--somos_fundo) no-repeat;
+    background-size:cover ;
+    background-position: center;        
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 50px;
+    background: var(--cor_primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 50px;
+    background: var(--cor_primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.objt_imagem{
+   align-self: auto;
+   height: 5%;
+   width: 5%;
+   max-width: 55px;
+}
+
+.dds{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.smos_cntner{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 40px;
+    max-width: 50%;
+    min-width: 300px;
+    /*max-height: 80vh;*/
+    background: transparent;
+    border: 2px solid snow;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px var(--cor_primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap:nowrap;
+    
+}
+
+.smos_login{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mvv_cntner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgb(150, 148, 148);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px var(--cor_primaria);
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mvv_txt{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgb(150, 148, 148);
+    border-radius: 20px;
+    backdrop-filter: blur(70px);
+    box-shadow: 0 0 70px var(--cor_primaria);
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.somos a,
+.rbtn_imag label{
+    color: var(--cor_primaria);
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.somos a{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.mvv_txt h4{
+    color: var(--cor_primaria);
+    font-size: 18px;
+} 
+
+.mvv_txt span{
+    color: var(--cor_primaria);
+    font-size: 14px;
+} 
+.r_btn_sent{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.r_btn_sent .rbtn_imag,
+.t_btn_sent .tbtn_imag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+}
+
+.smos_cntner:hover{
+    border-color: transparent;
+    animation: border-gradient 2s linear infinite;
+}
+@keyframes border-gradient{
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+
+    100%{
+        border-color: red;
+    }
+}
+
+.t_btn_sent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.rbtn_imag .img_sent_rbtn,
+.tbtn_imag .img_sent_tbtn{
+    padding: 2px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.tit_sms{
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: var(--cor_primaria);
+}

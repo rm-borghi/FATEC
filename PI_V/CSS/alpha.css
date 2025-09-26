@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --cor_primaria: rgba(255, 255, 255, 0.9);
+    --cor_secundaria: rgba(25, 58, 5, 0.801);
+    --alpha_img_fundo: url('https://eclipsedataworks.devfatec-campinas.com.br/IMAGENS/alpha.png')    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--alpha_img_fundo) no-repeat;
+    background-size:cover ;
+    background-position: center;        
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 20px 50px;
+    background: var(--cor_primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.alp_cntner{
+    margin-top: 50px;
+    width: 90%;
+    border: 2px solid snow;
+    border-radius: 8px;
+    box-shadow: 0 0 30px var(--cor_primaria);
+    display: flex;
+    color: snow;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+}
+
+.btnv{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnv a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid snow;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.btnv a:hover{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: snow;
+    border: 1px solid snow;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.versao{
+    
+    font-weight: 300;
+}
+
+.subitem{
+    margin-left: 30px;
+}
+
+.subsubitem{
+    margin-left: 40px;
+}
+
+.icon{
+    font-size: 30px;
+    color: blue;
+}
+
+.cont_card{
+    display: flex;
+    flex-direction: row;
+    padding: 0 1px;
+}
+
+.card{
+    padding: 4px;
+    width: 50%;
+    border: 1px solid snow;
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.card:hover{
+    border-color: transparent;
+    animation: border-gradient 2s linear infinite;
+}
+@keyframes border-gradient{
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+
+    100%{
+        border-color: red;
+    }
+}

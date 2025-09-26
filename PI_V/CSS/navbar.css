@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* INICIO configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --cor_primeira: rgba(255, 255, 255, 0.9);
+    --cor_segunda: rgba(25, 58, 5, 0.8);
+    --cor_terceira: rgba(21, 59, 2, 0.9);
+    --cor_quinta: rgba(255, 0, 0, 0.5);
+    --cor_quarta: grey;
+    --img_background: url('https://eclipsedataworks.devfatec-campinas.com.br/IMAGENS/floresta_caminho.jpg');
+    --max_alt_imag_sent: 175px;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--img_background) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    position: relative;
+    left: 260px;
+    color: var(--cor_quinta);
+}
+
+h3{
+    color: var(--cor_quinta); 
+}
+/*FIM configurações gerais*/
+
+/*INICIO de configuração do SIDEBAR*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(5px); 
+    padding: 6px 14px;
+    transition: .5s;
+    border-right: 2px solid var(--cor_primeira);
+    box-shadow: 0 0 10px var(--cor_segunda);
+}
+
+.sidebar.active{
+    width: 220px;
+}
+
+.sidebar .logo-menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;    
+}
+
+.sidebar .logo-menu .logo{
+    font-size: 25px;
+    color: var(--cor_primeira);
+    pointer-events: none;
+    opacity: 0;
+    transition-delay: .3s;
+}
+
+.sidebar.active .logo-menu .logo{
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.sidebar .logo-menu .toggle-btn{
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    color: var(--cor_primeira);
+    background: transparent;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.sidebar.active .logo-menu .toggle-btn{
+    left: 90%;
+}
+
+.sidebar .list{
+    margin-top: 10px;
+}
+
+.list .list-item{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor_primeira);
+    margin: 6px 0;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+.list .list-item a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--cor_segunda);
+    text-decoration: none;
+    border-radius: 7px;
+    transition: .5s;
+    white-space: nowrap;
+}
+
+.list .list-item.active a,
+.list .list-item a:hover {
+    color: var(--cor_primeira);
+    background: var(--cor_segunda);
+}
+
+.list .list-item a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+
+}
+
+.sidebar .link-name{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.sidebar.active .link-name{
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: calc(.1s * var(--i));
+}
+/*FIM de configuração do SIDEBAR*/
+
+/*INICIO de config do dos form*/
+.all_form{
+    position: relative;
+    left: 230px;
+    max-width: 75%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: var(--cor_primeira); 
+    box-shadow: 0 5px 10px var(--cor_quarta);   
+}
+
+.loc_form{
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 0 15px;
+    background-color: var(--cor_primeira); 
+    box-shadow: 0 5px 10px var(--cor_quarta);   
+}
+
+.all_form header{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cor_segunda);
+}
+
+.all_form header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--cor_quarta);
+}
+
+.all_form form{
+    position: relative;
+    padding: 5px;
+    min-height: 490px;
+    margin-top: 16px;
+    background: var(--cor_primeira);
+    border: 2px solid var(--cor_terceira);
+    border-radius: 6px;
+}
+
+.all_form .frm_2{
+    position: relative;
+    padding: 5px;
+    min-height: 80vh;
+    margin-top: 16px;
+    background: var(--cor_primeira);
+    border: 2px solid var(--cor_terceira);
+    border-radius: 6px;
+}
+
+.all_form .frm_3{
+    position: relative;
+    padding: 5px;
+    min-height: 150px;
+    margin-top: 16px;
+    background: var(--cor_primeira);
+    border: 2px solid var(--cor_terceira);
+    border-radius: 6px;
+}
+
+.all_form .frm_4{
+    position: relative;
+    padding: 5px;
+    width: 65%;
+    min-height: 55px;
+    margin-top: 16px;
+    background: var(--cor_primeira);
+    border: 2px solid var(--cor_terceira);
+    border-radius: 6px;
+}
+
+.all_form .frm_4 .dds{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.all_form form .tit{
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: var(--cor_segunda);
+}
+
+.tit_sms{
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: var(--cor_primeira);
+}
+
+.all_form form .oculto{
+    display: none;
+}
+
+.all_form form .dds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.all_form form .dds .inp_dds{
+    display: flex;
+    width: calc(100% / 2 - 10px) ;
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.all_form form .dds textarea{
+    display: flex;
+    width: calc(100% - 10px);
+    height: 100px;
+    margin: 4px 0;
+    color: var(--cor_segunda);
+    border: 1px solid var(--cor_segunda);
+    border-radius: 5px;
+}
+.all_form form .dds .consResumo{
+    display: flex;
+    width: calc(100% - 10px);
+    margin: 4px 0;
+    color: var(--cor_segunda);
+    border: 1px solid var(--cor_segunda);
+    border-radius: 5px;
+}
+
+.r_btn_sent{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.r_btn_sent .rbtn_imag,
+.t_btn_sent .tbtn_imag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+}
+
+.t_btn_sent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.rbtn_imag .img_sent_rbtn,
+.tbtn_imag .img_sent_tbtn{
+    padding: 2px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    max-height: var(--max_alt_imag_sent);
+    border-radius: 8px;
+}
+
+.img_sent_tab{
+    padding: 2px;
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 8px;
+}
+
+.all_form form .r_btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.inp_dds label, .r_btn label,
+.all_form form .dds label{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cor_segunda);
+}
+
+.inp_dds input, select,
+.all_form form .dds .textolongo,
+.all_form form .dds .consResumo{
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cor_terceira);
+    border-radius: 5px;
+    border: 1px solid var(--cor_segunda);
+    padding: 0 10px;
+    height: 40px;
+    margin: 8px 0;
+}
+
+.inp_dds input:focus,
+select:focus{
+    border: 3px solid;    
+    animation: border-input 2s linear infinite;
+}
+
+.inp_dds .slc_dta{
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cor_terceira);
+    border-radius: 5px;
+    border: 1px solid var(--cor_segunda);
+    padding: 0 10px;
+    height: 100px;
+    margin: 8px 0;
+}
+
+.frm_2 .slc, .frm_3 .slc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp_dds input[type="date"],
+.inp_dds input[type="time"]{
+    color: grey;
+}
+
+.inp_dds input[type="date"]:valid,
+.inp_dds input[type="time"]:valid{
+    color: var(--cor_terceira);    
+}
+
+.all_form form .cntner_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--cor_primeira);
+    border-radius: 5px;
+    background-color: var(--cor_primeira);
+
+}
+.all_form .cntner_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--cor_primeira);
+    border-radius: 5px;
+    background-color: var(--cor_primeira);
+}
+
+.btn_env, .btn_loc,
+.btn_vol, .btn_env,
+.btn_exp{
+    color: var(--cor_primeira);
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 8px;
+    background:  var(--cor_segunda);
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.btn_env:hover, .btn_loc:hover,
+.btn_vol:hover, .btn_env:hover,
+.btn_exp:hover{
+    color: var(--cor_segunda);
+    height: 40px;
+    width: 80px;
+    border: 3px solid var(--cor_segunda);
+    border-radius: 8px;
+    background:  var(--cor_primeira);
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/*FIM de config do dos form*/
+
+/*INICIO config dos botões dentro da tabela*/
+table .btn_tab {
+    color: none;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--cor_primeira);
+    height: 15px;
+    width: 30px;
+    background: var(--cor_segunda);
+    font-size: 0.5em;
+    font-weight: 100;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+table .btn_tab:hover{
+    text-align: center;
+    color: var(--cor_segunda);
+    height: 15px;
+    width: 30px;
+    border: 0.5px solid var(--cor_segunda);
+    border-radius: 8px;
+    background: var(--cor_primeira);
+    font-size: 0.5em;
+    font-weight: 100;
+}
+/*Fim config dos botões dentro da tabela*/
+
+table{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--cor_segunda);
+    color: var(--cor_terceira);
+}
+
+table td{
+    text-align: center;
+}
+
+table td .consNaoLanc i {
+    color: red;
+}
+
+.cnt_card_sessao,
+.cnt_card_sent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_sessao_gre,
+.card_sessao_red{
+    flex: 1 1 250px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card_sessao_gre,
+.card_sent_gre{
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--cor_segunda);
+}
+
+.card_sessao_gre:hover,
+.card_sent_gre:hover{
+    border: 2px solid ;
+    border-color: transparent;
+    animation: border-verde 2s linear infinite;
+    border-radius: 5px;
+}
+
+.card_sessao_red,
+.card_sent_red{
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--cor_quinta);
+}
+
+.card_sessao_red:hover,
+.card_sent_red:hover{
+    border: 2px solid ;
+    border-color: transparent;
+    animation: border-verme 2s linear infinite;
+    border-radius: 5px;
+}
+
+.card_sent_gre,
+.card_sent_red{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 350px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card{
+    padding: 5px;
+    margin: 2px 2px 2px 2px;
+}
+
+@keyframes border-verde{
+    0% {
+        border-color: rgba(5, 211, 22, 0.9);
+    }
+
+    25% {
+        border-color: rgba(36, 177, 78, 0.9);
+    }
+
+    50% {
+        border-color: rgba(5, 211, 22, 0.9);
+    }
+    75% {
+        border-color: rgba(36, 177, 78, 0.9);
+    }
+
+    100%{
+        border-color: rgba(5, 211, 22, 0.9);
+    }
+}
+
+@keyframes border-verme{
+    0% {
+        border-color: rgba(255, 5, 5, 0.993);
+    }
+
+    25% {
+        border-color: rgba(158, 23, 45, 0.993)
+    }
+
+    50% {
+        border-color: rgba(255, 5, 5, 0.993);
+    }
+    75% {
+        border-color: rgba(158, 23, 45, 0.993)
+    }
+
+    100%{
+        border-color: rgba(255, 5, 5, 0.993);
+    }
+}
+
+@keyframes border-input{
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+
+    100%{
+        border-color: red;
+    }
+}
