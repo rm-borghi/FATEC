@@ -58,7 +58,7 @@ const validaCep = (cep) => cep.length == 8 && /^[0-9]+$/.test(cep);
 const pesquisarCep = async() => {
     limpaDados();
     const cep = document.getElementById('cep').value;
-    const api = `http://viacep.com.br/ws/${cep}/json/`;
+    const api = `https://viacep.com.br/ws/${cep}/json/`;
     if (validaCep(cep))
     {
         const r_api = await fetch(api);

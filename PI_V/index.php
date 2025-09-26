@@ -26,8 +26,8 @@ if(isset($_POST['ind_user']) && isset($_POST['ind_senha'])){
         $n_sql->execute();
         $r_sql = $n_sql->get_result();
         $s_sql = $r_sql->fetch_assoc();
-            if(isset($r_sql) && $r_sql->num_rows == 1 && $val_pwd === $s_sql['Pwd'])
-                //password_verify($val_pwd,$s_sql['Pwd']))
+            if(isset($r_sql) && $r_sql->num_rows == 1 && //$val_pwd === $s_sql['Pwd'])
+                password_verify($val_pwd,$s_sql['Pwd']))
                 {
                 $_SESSION['user'] = $val_user;
                 $_SESSION['nom_user'] = $s_sql['Nome'];

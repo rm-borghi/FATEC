@@ -15,7 +15,7 @@ if(isset($_POST['btnEnvCon'])){
                 <div class="dds">
                     <div class="inp_dds">
                         <label>*Nome Paciente</label>
-                        <select name ="cod_pac">
+                        <select name ="cod_pac" required>
                             <?php  
                                 $pac = mysqli_query($conn, $sql_select_all_paciente); 
                                 while($row_pac = mysqli_fetch_array($pac)) {?>                    
@@ -28,7 +28,7 @@ if(isset($_POST['btnEnvCon'])){
 
                     <div class="inp_dds">
                         <label>*Nome Psicologo</label>
-                        <select name ="cod_psic">
+                        <select name ="cod_psic" required>
                             <?php  
                                 $psc = mysqli_query($conn, $sql_select_all_psicologo); 
                                 while($row_psc = mysqli_fetch_array($psc)) {?>                    
