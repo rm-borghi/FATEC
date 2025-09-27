@@ -1,7 +1,7 @@
 <?php
 
 //Lista nomes de endereços Paginas
-$index = 'https://eclipsedataworks.devfatec-campinas.com.br/';
+$index = 'https://poc-eclipsedataworks.devfatec-campinas.com.br/';
 $menuPrincipal = '/APLICATIVO/Aux_Page/menuPrincipal.php';
 $menuCadPac = './menuPacientes.php';
 $menuCadast = './menuCadastro.php';
@@ -21,6 +21,20 @@ $alpha = '/APLICATIVO/Aux_Page/versaoAlpha.php';
         $buscaListaPacientes = $_SERVER['DOCUMENT_ROOT'] . '/APLICATIVO/Aux_Page/ADM/PACIENTE/buscaPac.php';
         $buscaListaSentimentos = $_SERVER['DOCUMENT_ROOT'] . '/APLICATIVO/Aux_Page/ADM/PACIENTE/buscaCadSent.php';
 
+    //Paginas da função VAL_DDS() que retorna a pagina conforme o código das NAVBARS
+        $ddsUpdtPac = './ADM/PACIENTE/ddsUpdtPac.php';
+        $ddsSesPac = './ADM/PACIENTE/ddsSesPac.php';
+        $ddsSentPac = './ADM/PACIENTE/ddsSentPac.php';
+        $ddsCadAnx = './ADM/PACIENTE/ddsCadAnx.php';
+        $ddsCadPsc = './ADM/PSICOLOGO/ddsCadPsc.php';
+        $ddsCadPac =  './ADM/PACIENTE/ddsCadPac.php';
+        $ddsAgnPsc = './ADM/PSICOLOGO/ddsAgnPsc.php';
+        $ddsCadSes = './ADM/CONSULTA/ddsCadSes.php';
+        $ddsCadCon = './ADM/CONSULTA/ddsCadCon.php';
+        $ddsSentList = './ADM/PACIENTE/ddsSentList.php';
+        $ddsDetPac = './ADM/PACIENTE/ddsDetPac.php';
+        $ddsBusAnex = './ADM/PACIENTE/ddsBusAnex.php';
+    
 //Imagens
 $img_background = '../../IMAGENS/psic_img_001.jpeg';
     //Sentimentos Negativos para a pagina de Emoções

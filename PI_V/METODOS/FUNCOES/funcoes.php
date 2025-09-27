@@ -139,6 +139,7 @@ function val_session ($user,$end){
 
 //função para validar qual dado aparece no menu
 function val_dds($cod){
+require $_SERVER['DOCUMENT_ROOT'] . '/METODOS/ENDERECO/ende.php';
 
     switch ($cod) {
         //menus com código 100 estão no navBarPrinc.php
@@ -146,19 +147,19 @@ function val_dds($cod){
         //menu do paciente códigos 200
         case '201':
             //opção de atualização de cadastro paciente            
-            $dds = './ADM/PACIENTE/ddsUpdtPac.php';
+            $dds = $ddsUpdtPac;
             break;
         case '202':
             //opção de ver consultas já realizadas
-            $dds = './ADM/PACIENTE/ddsSesPac.php';
+            $dds = $ddsSesPac;
             break;
         case '203':
             //opção de sentimento de paciente
-            $dds = './ADM/PACIENTE/ddsSentPac.php';
+            $dds = $ddsSentPac;
             break;
         case '204':
             //opção de envio de anexo
-            $dds = './ADM/PACIENTE/ddsCadAnx.php';
+            $dds = $ddsCadAnx;
             break;            
         case '205':
             //
@@ -168,35 +169,35 @@ function val_dds($cod){
         //menu do pscólogo & Root códigos 300
         case '301':
             //opção de cadastro novo psicologo
-            $dds = './ADM/PSICOLOGO/ddsCadPsc.php';
+            $dds = $ddsCadPsc;
             break;
         case '302':
             ///opção de cadastro novo paciente
-            $dds = './ADM/PACIENTE/ddsCadPac.php';
+            $dds = $ddsCadPac;
             break;
         case '303':
             //opção de agendamentos do piscologo
-            $dds = './ADM/PSICOLOGO/ddsAgnPsc.php';
+            $dds = $ddsAgnPsc;
             break;
         case '304':
             //opção de sessão
-            $dds = './ADM/CONSULTA/ddsCadSes.php';
+            $dds = $ddsCadSes;
             break;
         case '305':
             //opção de Consulta
-            $dds = './ADM/CONSULTA/ddsCadCon.php';
+            $dds = $ddsCadCon;
         break;
         case '306':
             //acompanhamento de Sentimentos
-            $dds = './ADM/PACIENTE/ddsSentList.php';
+            $dds = $ddsSentList;
         break;
         case '307':
             //localizar Paciente
-            $dds = './ADM/PACIENTE/ddsDetPac.php';
+            $dds = $ddsDetPac;
         break;
         case '308':
             //localizar anexos
-            $dds = './ADM/PACIENTE/ddsBusAnex.php';
+            $dds = $ddsBusAnex;
         break;
         
         default:

@@ -1,14 +1,5 @@
 <?php
-//gera lista de user e senhas
-$sql_select_list_user_pwd_2 = 'SELECT 1 as Id,rtUser as User, rtPwd as Pwd, "root" as Nome,"root" as UserTipo FROM TB_Root WHERE rtUser = ?';
 
-# Ajustar para nova versão do MySQL que está no banco de dados, não funfa com WITH()
-$sql_select_list_user_pwd_1 = 'WITH tb as (SELECT idPsc as Id,pscLogUser as User, pscLogPwd as Pwd, pscNome as Nome,"psc" as UserTipo FROM tb_psicologo 
-                                        UNION 
-                                        SELECT idPac as Id,pacLogUser as User, pacLogPwd as Pwd, pacNome as Nome,"pac" as UserTipo FROM tb_pacientes
-                                        UNION
-                                        SELECT 1 as Id,rtUser as User, rtPwd as Pwd, "root" as Nome,"root" as UserTipo FROM TB_Root) 
-                            SELECT Id, User, Pwd, Nome, UserTipo FROM tb WHERE tb.User = ?;';
 # formato subqueries versão do mysql que não aceita WITH()
 $sql_select_list_user_pwd = 'SELECT Id, User, Pwd, Nome, UserTipo
                             FROM (

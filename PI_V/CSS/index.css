@@ -10,7 +10,7 @@
 :root{
     --cor_primaria: rgba(255, 255, 255, 0.9);
     --cor_secundaria: rgba(25, 58, 5, 0.801);
-    --index_img_fundo: url('https://eclipsedataworks.devfatec-campinas.com.br/IMAGENS/floresta_caminho.jpg')
+    --index_img_fundo: url('https://poc-eclipsedataworks.devfatec-campinas.com.br/IMAGENS/floresta_caminho.jpg')
 }
 
 body{
